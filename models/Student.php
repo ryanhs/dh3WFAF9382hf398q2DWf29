@@ -7,5 +7,6 @@ if (!class_exists('Student')) {
         public $unYear;
         public $unNumber;
         public $formerSchool;
+        public $registeredAt;
     }
 }

@@ -7,7 +7,7 @@ For this API, we provide each other to check if the following information is alr
 - former school
 
 ## Logic
-UN, we sometimes struggle to understand, why UN in every year can have same number. For that we must use type and year of the UN.  
+UN, sometimes we struggle to understand, why UN in every year can have same number. For that we must use type and year of the UN.  
 for this, the format is: `type|year|number`,  
 example: `reguler|2016|86-10-012-023-5`
 
@@ -18,7 +18,7 @@ AND SIMILAR_OLIVER(formerschool, "SMP YPJ KUALA KENCANA SELATAN") > 85
 AND SIMILAR_OLIVER(un, "reguler|2016|86-10-012-023-5") > 85
 ```
 
-\*here we use oliver algorithm to check the strings if similar. with some precentage (85% hope enough).
+\*here we use oliver's algorithm to check the strings if similar. with some precentage (85% hope enough).
 Better idea are welcome!  
 \*ah yes, use lower case to compare the strings, to make sure avoid case insensitive issue.
 
@@ -36,6 +36,12 @@ querystring:
 
 **response**  
 a list of students based on what searched.
+- name
+- unType
+- unYear
+- unNumber
+- formerSchool *#SMP*
+- registeredAt *#SMA/K*
 
 
 
@@ -52,14 +58,16 @@ it will return:
         "unType": "reguler",
         "unYear": "2016",
         "unNumber": "86-10-012-021-4",
-        "formerSchool": "SMP YPJ KUALA KENCANA SELATAN"
+        "formerSchool": "SMP YPJ KUALA KENCANA SELATAN",
+        "registeredAt": "SMA NEGERI 1 BANDUNG"
     },
     {
         "name": "KEYSHA ALMA PRIMASHI",
         "unType": "reguler",
         "unYear": "2016",
         "unNumber": "86-10-012-023-5",
-        "formerSchool": "SMP YPJ KUALA KENCANA BARAT"
+        "formerSchool": "SMP YPJ KUALA KENCANA BARAT",
+        "registeredAt": "SMA NEGERI 3 BANDUNG"
     }
 ];
 ```
@@ -77,14 +85,16 @@ somejsonpcallback([
         "unType": "reguler",
         "unYear": "2016",
         "unNumber": "86-10-012-021-4",
-        "formerSchool": "SMP YPJ KUALA KENCANA SELATAN"
+        "formerSchool": "SMP YPJ KUALA KENCANA SELATAN",
+        "registeredAt": "SMA NEGERI 1 BANDUNG"
     },
     {
         "name": "KEYSHA ALMA PRIMASHI",
         "unType": "reguler",
         "unYear": "2016",
         "unNumber": "86-10-012-023-5",
-        "formerSchool": "SMP YPJ KUALA KENCANA BARAT"
+        "formerSchool": "SMP YPJ KUALA KENCANA BARAT",
+        "registeredAt": "SMA NEGERI 3 BANDUNG"
     }
 ]);
 ```

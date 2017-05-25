@@ -37,6 +37,7 @@ if (!empty($_GET['untype']))
 // $results = json_encode($driver->execute());
 $results = json_encode($driver->execute(), JSON_PRETTY_PRINT); // for debug is good to have pretty print
 
+header('Content-Type:application/json');
 if ($callback !== false) echo $callback.'(';
 echo $results;
 if ($callback !== false) echo ');';

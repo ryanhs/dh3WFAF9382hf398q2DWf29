@@ -47,6 +47,7 @@ if (!class_exists('ExampleArray')) {
                     $tmp->unType = explode('|', $student[0])[0];
                     $tmp->unYear = explode('|', $student[0])[1];
                     $tmp->unNumber = explode('|', $student[0])[2];
+                    $tmp->registeredAt = $student[3];
                     $results[] = $tmp;
                 }
             }
